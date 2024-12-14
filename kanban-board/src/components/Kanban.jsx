@@ -5,7 +5,7 @@ import Board from "./Board";
 export const TaskContext = createContext();
 
 const Kanban = () =>{
-const [stateObj,setStateObj] = useState({taskList:[]});
+const [stateObj,setStateObj] = useState({todo:[],analysis:[],progress:[],blocked:[],verify:[],done:[]});
 return(
     <div>
         <TaskContext.Provider value={{stateObj,setStateObj}}>

@@ -18,16 +18,13 @@ border: 5px solid green;
 }
 `;
 
-const Column = ({title}) =>{
+const Column = ({title,list}) =>{
 return(
     <StyledList>
         <StyledHeader>{title}</StyledHeader>
-        <ListItem>1</ListItem>
-        <ListItem>2</ListItem>
-        <ListItem>3</ListItem>
-        <ListItem>1</ListItem>
-        <ListItem>2</ListItem>
-        <ListItem>3</ListItem>
+        {list && list.map((task,i)=>(
+            <ListItem id={i} draggable={true}>{task.title}</ListItem>
+        ))}
     </StyledList>
 )
 }
