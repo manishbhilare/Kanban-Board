@@ -35,9 +35,7 @@ const TaskModal = ({openState,setOpen})=>{
         {
             const currList = stateObj.todo;
             currList.push(task);
-            const taskList = {...stateObj,todo:currList}
-            setStateObj(taskList);
-            console.log(stateObj);
+            setStateObj({...stateObj,todo:currList});
             alert("Task created succesfully!");
             setOpen(false);
         }

@@ -25,16 +25,18 @@ const Board = () =>{
         setProgressList(stateObj.progress);
         setDoneList(stateObj.done);
     },[stateObj]);
+
+
 return(
    <>
    <h1>Board</h1>
    <StyledContainer>
-   <Column id="todo" title={"To Do"} list={todoList} droppable={true}/>
-   <Column id="analysis" title={"In Analysis"} list={analysisList} droppable={true}/>
-   <Column id="progress" title={"In Progress"} list={progressList} droppable={true}/>
-   <Column id="blocked" title={"Blocked"} list={blockedList} droppable={true}/>
-   <Column id="verify" title={"Verify"} list={verifyList} droppable={true}/>
-   <Column id="Done" title={"Done"} list={doneList} droppable={true}/>
+   <Column colId="todo" title={"To Do"} list={todoList}/>
+   <Column colId="analysis" title={"In Analysis"} list={analysisList}/>
+   <Column colId="progress" title={"In Progress"} list={progressList}/>
+   <Column colId="blocked" title={"Blocked"} list={blockedList}/>
+   <Column colId="verify" title={"Verify"} list={verifyList}/>
+   <Column colId="done" title={"Done"} list={doneList}/>
    </StyledContainer>
  
    </> 
